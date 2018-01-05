@@ -24,7 +24,7 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-mongoose.connect('mongodb://admin:admin@127.0.0.1:27017/admin?authSource=admin')
+mongoose.connect('mongodb://127.0.0.1:27017/admin')
 
 var user = new Schema({
   phone : String,
