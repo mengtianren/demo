@@ -21,13 +21,13 @@ router.post('/api/login/createAccount',(req,res) => {
           data:'该用户名已存在'
         })
       } else{
-        let newAccount = new models.User({
+        let newPhone = new models.User({
           phone : req.body.params.phone,
           password : req.body.params.password,
           date:new Date()
         });
         // 保存数据newAccount数据进mongoDB
-        newAccount.save((err,data) => {
+        newPhone.save((err,data) => {
           if (err) {
             res.send(err);
           } else {
