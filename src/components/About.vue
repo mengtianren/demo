@@ -17,9 +17,6 @@
   import {mapState,mapMutations} from 'vuex'
     export default {
         name: "login",
-      computed:{
-        ...mapState(['number','user_session'])
-      },
       methods:{
         ...mapMutations(['setTitle']),
         routerPush(i){

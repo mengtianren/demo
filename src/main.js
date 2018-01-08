@@ -17,7 +17,7 @@ Vue.use(VueLazyload, {
 });
 Vue.use(VueLazyload)
 router.beforeEach((to,from,next)=>{
-  console.log(to,to.meta.requireAuth)
+  // console.log(to,to.meta.requireAuth)
   if (to.meta.requireAuth) {  // 判断该路由是否需要登录权限
     if ($cookies.get('phone')) {
       next();

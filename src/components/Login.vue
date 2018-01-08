@@ -31,7 +31,7 @@
           }
           this.$http.post('/api/login/getAccount',{params:{phone:this.phone,password:this.password}})
             .then((info)=>{
-              console.log(info.data)
+              // console.log(info.data)
               if(!info.data.error){
                 this.$cookies.set('phone',info.data.phone,60 * 60 * 24);
                 this.$router.push({path:'/'})
