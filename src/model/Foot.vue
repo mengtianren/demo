@@ -16,8 +16,8 @@
 <style scoped>
   .foot{
     width: 100%;
-    height: 44px;
-    line-height: 44px;
+    height: 0.88rem;
+    line-height: 0.88rem;
     display: flex;
     border-top: 1px solid #ebebeb;
     background: #fff;

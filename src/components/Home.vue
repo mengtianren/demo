@@ -21,6 +21,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 .hello{
-  padding: 44px 0;
+  /*padding: 44px 0;*/
 }
 </style>

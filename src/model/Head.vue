@@ -12,9 +12,9 @@
 
 <style scoped>
 .Head{
-  height: 44px;
+  height: 0.88rem;
   width: 100%;
-  line-height: 44px;
+  line-height: 0.88rem;
   background: #fff;
   border-bottom: 1px solid #ebebeb;
   text-align: center;

@@ -22,7 +22,7 @@
     methods:{
       ...mapMutations(['setTitle']),
       register(){
-        // console.log(this.phone.length,isNaN(this.phone))
+        console.log(this.phone.length,isNaN(this.phone))
         if(this.phone.length!=11||isNaN(this.phone)){
           alert('请输入正确的手机号')
           return
@@ -39,7 +39,7 @@
               alert(info.data.data)
             }
 
-            // console.log(info.data.data)
+            console.log(info.data.data)
           })
       }
     },

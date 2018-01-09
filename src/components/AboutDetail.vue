@@ -20,17 +20,17 @@
 <style scoped>
 .detail{
   text-align: center;
-  padding: 22px;
+  /*padding:0.44rem;*/
 }
 .title{
   /*font-size: 1.3rem;*/
-  margin-bottom: 10px;
+  margin-bottom: 0.2rem;
   /*border-bottom: 1px solid #ebebeb;*/
-  height: 44px;
-  line-height: 44px;
+  height:0.88rem;
+  line-height: 0.88rem;
 }
 .content{
-  font-size: 0.8rem;
+  font-size: 0.3rem;
   color: #ccc;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -38,7 +38,7 @@
   overflow: hidden;
   border: 1px solid #ebebeb;
   margin: 0;
-  padding: 10px;
+  padding: 0.2rem;
 }
   img{
     width: 50%;

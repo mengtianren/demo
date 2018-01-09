@@ -5,7 +5,7 @@
         >
           <img v-lazy="'../static/img/'+i+'.png'">
           <p class="content">
-            <span class="title">这是第{{i}}张图片{{position}}</span>
+            <span class="title">这是第{{i}}张图片</span>
             <span class="content" >这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍</span>
           </p>
         </li>
@@ -36,6 +36,7 @@
         },
         onScroll(e,position){
           this.position = position;
+          console.log(position)
           if(this.msg<50){
             this.loading = '正在加载中' ;
               this.msg +=10;
@@ -65,7 +66,7 @@ ul{
 }
   li{
     display: block;
-    height: 104px;
+    height: 2.08rem;
     border-bottom: 1px solid #ebebeb;
     display: flex;
     align-items: center;
@@ -85,10 +86,10 @@ ul{
   }
   .content .title{
     /*font-size: 1.3rem;*/
-    margin-bottom: 10px;
+    margin-bottom: 0.2rem;
   }
   .content .content{
-    font-size: 0.8rem;
+    font-size: 0.3rem;
     color: #ccc;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -106,16 +107,16 @@ ul{
   /*height:-webkit-calc(80% - 100px);*/
   /*height: calc(80% - 100px);*/
   position: absolute;
-  top: 44px;
+  top: 0.88rem;
   left: 0;
   right: 0;
-  bottom: 44px;
+  bottom: 0.88rem;
 
 }
   .loading{
     display: block;
     text-align: center;
-    height: 44px;
-    line-height: 44px;
+    height: 0.88rem;
+    line-height: 0.88rem;
   }
 </style>

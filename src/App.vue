@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import '../static/js/rem'
 export default {
   name: 'app'
 }
@@ -18,6 +19,9 @@ export default {
     list-style: none;
     text-decoration:none;
   }
+  body{
+    font-size: 0.32rem;
+  }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,6 +29,7 @@ export default {
   /*text-align: center;*/
   color: #2c3e50;
   /*margin-top: 60px;*/
+  padding: 0.88rem 0;
 }
  a{
    color:#ccc

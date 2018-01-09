@@ -42,7 +42,7 @@
     text-align: center;
   }
   .input_button{
-    height: 40px;
+    height: 0.8rem;
     width: 80%;
     background: #0099FF;
     color: #fff;
