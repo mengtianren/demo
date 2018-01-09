@@ -1,22 +1,31 @@
 <template>
-    <div class="login">
-      <ul>
-        <li v-for="i in 31" @click="routerPush(i)">
+    <div class="about">
+      <ul v-scroll:throttle="{fn: onScroll, throttle: 800 }">
+        <li v-for="i in msg" @click="routerPush(i)"
+        >
           <img v-lazy="'../static/img/'+i+'.png'">
           <p class="content">
-            <span class="title">这是第{{i}}张图片</span>
+            <span class="title">这是第{{i}}张图片{{position}}</span>
             <span class="content" >这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍这是第{{i}}张图片的介绍</span>
           </p>
-
         </li>
+        <span class="loading" v-if="loading">{{loading}}</span>
       </ul>
+
     </div>
 </template>
 
 <script>
-  import {mapState,mapMutations} from 'vuex'
+  import {mapMutations} from 'vuex'
     export default {
-        name: "login",
+        name: "about",
+      data(){
+        return {
+          msg:10,
+          loading:'',
+          position: {scrollTop: 0, scrollLeft: 0}
+        }
+      },
       methods:{
         ...mapMutations(['setTitle']),
         routerPush(i){
@@ -24,6 +33,23 @@
             name:'aboutdetail',
             params:{id:i}
           })
+        },
+        onScroll(e,position){
+          this.position = position;
+          if(this.msg<50){
+            this.loading = '正在加载中' ;
+              this.msg +=10;
+          }else if(this.msg>=50){
+            if( this.loading == '正在加载中'){
+              this.loading = '暂无更多数据';
+            }
+            if(position.scrollTop>=4600){
+              setTimeout(()=>{
+                this.loading = ''
+              },3000)
+            }
+            return
+          }
         }
       },
       beforeMount(){
@@ -69,5 +95,27 @@ ul{
     -webkit-line-clamp: 2;
     overflow: hidden;
     margin: 0;
+  }
+.about ul {
+  width: 100%;
+  /*height: 500px;*/
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  /*height:-moz-calc(80% - 100px);*/
+  /*height:-webkit-calc(80% - 100px);*/
+  /*height: calc(80% - 100px);*/
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+
+}
+  .loading{
+    display: block;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
   }
 </style>

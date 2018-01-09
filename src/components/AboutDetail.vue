@@ -1,6 +1,6 @@
 <template>
     <div class="detail">
-      <img :src="'../static/img/'+ImgId+'.png'">
+      <img v-lazy="'../static/img/'+ImgId+'.png'">
       <p class="title">这是第{{ImgId}}张图片的详情标题</p>
       <p class="content">这是第{{ImgId}}张图片的介绍，这是第{{ImgId}}张图片的介绍，这是第{{ImgId}}张图片的介绍，这是第{{ImgId}}张图片的介绍，这是第{{ImgId}}张图片的介绍。</p>
     </div>
@@ -40,4 +40,7 @@
   margin: 0;
   padding: 10px;
 }
+  img{
+    width: 50%;
+  }
 </style>
