@@ -5,9 +5,11 @@ import vuescroll from 'vue-scroll'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+require('../Moke/mock')
 import VueCookies from 'vue-cookies'
 import VueLazyload from 'vue-lazyload'
 import store from './vuex/index'
+
 Vue.use(vuescroll, {debounce: 600}) ;
 Vue.use(VueCookies) ;
 

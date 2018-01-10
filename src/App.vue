@@ -6,6 +6,7 @@
 
 <script>
   import '../static/js/rem'
+  import '../static/css/iconfont.css'
 export default {
   name: 'app'
 }
@@ -18,6 +19,7 @@ export default {
     padding: 0;
     list-style: none;
     text-decoration:none;
+    box-sizing: border-box;
   }
   body{
     font-size: 0.32rem;

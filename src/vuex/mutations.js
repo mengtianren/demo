@@ -1,7 +1,10 @@
 
 export default {
   setTitle(state,title){
-      // console.log(title)
     state.title = title;
+  },
+  ShowTab(state){
+    state.TabShow = !state.TabShow;
+    console.log(state.TabShow)
   }
 }

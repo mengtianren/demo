@@ -54,7 +54,7 @@
         }
       },
       beforeMount(){
-          this.setTitle('此页面只有登录后才能进入')
+          this.setTitle('动态')
       }
     }
 </script>

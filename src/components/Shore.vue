@@ -12,7 +12,7 @@
       ...mapMutations(['setTitle'])
     },
     beforeMount(){
-      this.setTitle('未知')
+      this.setTitle('联系人')
     },
     }
 </script>

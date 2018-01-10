@@ -8,6 +8,7 @@ import User from '@/components/User'
 import register from '@/components/register'
 import AboutDetail from '@/components/AboutDetail'
 import Shore from '@/components/Shore'
+import List from '@/components/List'
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +50,11 @@ export default new Router({
         requireAuth: true
       },
       component:AboutDetail
-    }
+    },
+    {
+      path:'/list/:id',
+      name:'list',
+      component:List
+    },
   ]
 })

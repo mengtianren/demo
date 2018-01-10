@@ -29,7 +29,7 @@
             alert('请输入您的密码')
             return
           }
-          this.$http.post('/api/login/getAccount',{params:{phone:this.phone,password:this.password}})
+          this.$http.post('/app/login/getAccount',{params:{phone:this.phone,password:this.password}})
             .then((info)=>{
               console.log(info.data)
               if(!info.data.error){
@@ -58,23 +58,25 @@
     height: 40%;
     border: 1px solid #ebebeb;
     margin: 10% auto;
-    border-radius: 5px;
+    border-radius: 0.1rem;
     text-align: center;
   }
   .login_model .input{
-    height: 25px;
+    height: 0.5rem;
     width: 80%;
-    margin: 10px auto;
+    margin: 0.2rem auto;
     border-bottom: 1px solid #ebebeb;
+    font-size: 0.3rem;
   }
 
   .login_model .input_button{
-    height: 40px;
+    height:0.8rem;
     width: 80%;
     background: #0099FF;
     color: #fff;
     margin-top: 10%;
     margin-bottom: 5%;
+    font-size: 0.3rem;
   }
   .right_icon{
     display: block;
@@ -82,6 +84,6 @@
     margin-right: 10%;
     color: #0099FF;
     margin-bottom: 5%;
-    font-size: 14px;
+    font-size: 0.3rem;
   }
 </style>

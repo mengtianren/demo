@@ -47,6 +47,10 @@ module.exports = {
         options: vueLoaderConfig
       },
       {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]

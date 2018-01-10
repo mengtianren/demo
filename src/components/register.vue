@@ -31,7 +31,7 @@
           alert('请输入您要注册的密码')
           return
         }
-        this.$http.post('/api/login/createAccount',{params:{phone:this.phone,password:this.password}})
+        this.$http.post('/api1/login/createAccount',{params:{phone:this.phone,password:this.password}})
           .then((info)=>{
             if(!info.data.error){
               this.$router.push({path:'/login'})
