@@ -35,6 +35,15 @@ Mock.mock('/api/list', (req, res) => {
       "content":"你好~~在干嘛呢",
       "date":'上午3:00',
       "Unread":'50'
+    },
+    {
+      "id": "5",
+      "img": "./static/img/icon/tou3.jpg",
+      "name":"启明星",
+      "content":"右划可以删除联系人哦",
+      "date":'上午3:00',
+      "Unread":'50',
+
           }
 			]}
 });

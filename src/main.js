@@ -5,6 +5,7 @@ import vuescroll from 'vue-scroll'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+var VueTouch = require('vue-touch') ;
 require('../Moke/mock')
 import VueCookies from 'vue-cookies'
 import VueLazyload from 'vue-lazyload'
@@ -12,7 +13,7 @@ import store from './vuex/index'
 
 Vue.use(vuescroll, {debounce: 600}) ;
 Vue.use(VueCookies) ;
-
+Vue.use(VueTouch,{name:'v-touch'});
 
 Vue.use(VueLazyload, {
   preLoad: 1.3,

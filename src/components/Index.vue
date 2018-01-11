@@ -22,7 +22,6 @@
       Tab,
       Swipe
     },
-
     methods:{
       ...mapMutations(['setTitle'])
     },

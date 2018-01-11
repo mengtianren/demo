@@ -4,9 +4,7 @@
       <div class="msgTitle" >
           <div class="msglist" v-for="item in ListMsg" >
             <span class="content">
-              <span class="item">
-                {{item}}
-              </span>
+              <span class="item" v-text="item"></span>
               <span class="icon"></span>
             </span>
             <div class="rightIcon"><img src="../../static/img/icon/tou.jpg" alt=""></div>
@@ -14,7 +12,7 @@
       </div>
       <div class="footTab">
         <div class="footOne">
-          <input type="text" placeholder="请输入内容" v-model="msg" > <span @click="Send" >发送</span>
+          <input type="text" placeholder="请输入内容" v-model="msg" @click="HideS()" > <span @click="Send" >发送</span>
         </div>
         <div class="footTwo">
           <i class="iconfont icon-huatong" @click="Sund"></i>
@@ -68,6 +66,11 @@
         this.ImageShow = false;
         this.SoundParent = !this.SoundParent;
         this.ImageShow = !this.ImageShow;
+      },
+      HideS(){
+        this.SoundShow = false; //先隐藏所有
+        this.ImageShow = false;
+        this.SoundParent = false;
       }
     },
     components:{
@@ -108,6 +111,7 @@ position:absolute;
     outline:none;
     font-size: 0.28rem;
     margin: 0 0.1rem;
+    text-indent: 1em;
   }
   .footOne span{
     flex: 1;

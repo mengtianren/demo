@@ -19,6 +19,7 @@
   /*line-height: 0.66rem;*/
   background: #fff;
   text-align: center;
+  border-bottom: 1px solid #ebebeb;
 }
 .Seach input{
   width: 98%;
