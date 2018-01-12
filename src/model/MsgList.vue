@@ -94,6 +94,8 @@
   .List>div{
     width: 100%;
     display: flex;
+    align-items: center;
+    height: 100%;
   }
   .right-icon{
     display: inline-block;
