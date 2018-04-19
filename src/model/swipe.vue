@@ -3,7 +3,7 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="bannerItem in imgList">
-        <img :src="bannerItem" />
+        <img :src="bannerItem.url" />
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -15,20 +15,35 @@
   export default {
     data(){
       return {
-        imgList:['../../static/img/swipe_1.jpg','../../static/img/swipe_2.jpg','../../static/img/swipe_3.jpg']
+        imgList:[]
+      }
+    },
+    methods:{
+      gitDate(){
+        this.$http.get('/api/v1/home/carousel')
+          .then(info =>{
+            this.imgList = info.data.data
+            console.log(this.imgList)
+          }).catch(error =>{
+            console.log(error)
+        })
       }
     },
     created(){
       setTimeout(() => {
-        const swiper = new Swiper('.swiper-container', {
-          pagination: '.swiper-pagination',
-          paginationClickable: true,
-          spaceBetween: 3000,
-          autoplay: 1500,
-          effect: 'fade',
-        });
 
       }, 200);
+
+    },
+    mounted(){
+      this.gitDate();
+      const swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 3000,
+        autoplay: 1500,
+        effect: 'fade',
+      });
     }
    }
 </script>
